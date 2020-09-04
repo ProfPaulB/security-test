@@ -11,9 +11,24 @@ public class HomeController {
         return "index";
     }
 
+    @GetMapping("/2")
+    public String root2() {
+        return "index2";
+    }
+
     @GetMapping("/user")
     public String userIndex() {
-        return "/user/index";
+        return "/secured/user/index";
+    }
+
+    @GetMapping("/manager")
+    public String managerIndex() {
+        return "/secured/manager/index";
+    }
+
+    @GetMapping("/secured")
+    public String secureIndex() {
+        return "/secured/gateway";
     }
 
     @GetMapping("/login")
